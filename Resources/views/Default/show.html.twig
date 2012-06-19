@@ -1,0 +1,16 @@
+{# Post full page #}
+{% extends 'MGIBlogBundle::layout.html.twig' %}
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    <div class="post-date">{{ post.createdAt|date('j F, Y')}}</div>
+    {{ post.content|raw }}
+    {# Comments #}
+    <h2>Comments</h2>
+    {% for comment in comments %}
+        <div class="comment">
+            {{ comment.content|raw }}
+        </div> 
+    {% else %}
+        There are no comments
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends 'LyraAdminBundle:List:index.html.twig' %}
+{% block list_title %}
+    {% set title = filter.criteria.post.title|default(null) %}
+    <h1>{{ grid.title|transchoice(title is empty ? 0 : 1, { '%post_title%' : title }, grid.transDomain) }}</h1>
+{% endblock %}

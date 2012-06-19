@@ -1,0 +1,63 @@
+lyra_admin:
+    models:
+        post:
+            class: 'MGI\BlogBundle\Entity\Post'
+            actions:
+                comments:
+                    # to add a button in post list linked to an action
+                    # defined in comment model
+                    alias: comment.comments
+            list:
+                title: Posts
+                # by default most recent posts first
+                default_sort: {column: createdAt, order: desc}
+                columns:
+                    title: ~
+                    content: ~
+                    createdAt: ~
+                # add button linked to action 'comments'
+                object_actions: [show,edit,delete,comments]
+            form:
+                groups:
+                    main:
+                        fields: [title,content]
+                edit:
+                    actions: [index,save,delete,comments]
+        comment:
+            class: 'MGI\BlogBundle\Entity\Comment'
+            # custom controller to manage action 'comments'
+            controller: 'MGIBlogBundle:AdminComment'
+            services:
+                model_manager: mgi_blog.comment_manager                    
+            actions:
+                # shows all comments of a given post
+                comments:
+                    route_pattern: 'list/{id}'
+                    icon: comment
+                    text: Comments
+                    style: icon-only
+            list:
+                template: 'MGIBlogBundle:Admin:comment_index.html.twig'
+                # transchoice is used in template to include post title when
+                # comments of a given post are displayed.
+                # %% needed or %post_title% would be resolved as container
+                # parameter giving error
+                title: '{0}Comments|{1}Comments of "%%post_title%%"'
+                # by default most recent comments first
+                default_sort: {column: createdAt, order: desc}
+                columns:
+                    post:
+                        field: post.title
+                    content: ~
+                    published: ~
+                    createdAt: ~
+            filter:
+                fields:
+                    post: ~
+                    content: ~
+                    published: ~
+
+            form:
+                groups:
+                    main:
+                        fields: [post,content,published]

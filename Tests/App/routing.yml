@@ -1,0 +1,2 @@
+MGIBlogBundle:
+    resource: "@MGIBlogBundle/Resources/config/routing.yml"

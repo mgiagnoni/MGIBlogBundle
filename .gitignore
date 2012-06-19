@@ -1,0 +1,5 @@
+phpunit.xml
+Tests/autoload.php
+Tests/App/cache
+Tests/App/logs
+Tests/App/parameters.ini

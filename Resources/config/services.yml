@@ -1,0 +1,6 @@
+parameters:
+    mgi_blog.comment_manager.class: MGI\BlogBundle\Admin\CommentManager
+
+services:
+    mgi_blog.comment_manager:
+        class: %mgi_blog.comment_manager.class%
