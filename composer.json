@@ -1,0 +1,30 @@
+{
+    "name": "mgiagnoni/blog-bundle",
+    "type": "symfony-bundle",
+    "description": "Blog bundle for Symfony2 and Doctrine 2",
+    "keywords": ["blog"],
+    "homepage": "https://github.com/mgiagnoni/MGIBlogBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Massimo Giagnoni",
+            "email": "gimassimo@gmail.com"
+        },
+        {
+            "name": "contributors",
+            "homepage": "https://github.com/mgiagnoni/MGIBlogBundle/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": "2.0.*",
+        "doctrine/orm": "2.1.*",
+    },
+    "suggest": {
+        "symfony/doctrine-bundle": "*"
+    },
+    "autoload": {
+        "psr-0": { "MGI\\BlogBundle": "" }
+    },
+    "target-dir": "MGI/BlogBundle"
+}
