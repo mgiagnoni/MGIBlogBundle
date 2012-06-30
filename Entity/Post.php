@@ -59,7 +59,7 @@ class Post
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection $comments
      *
-     * @ORM\OneToMany(targetEntity="Comment", mappedBy="post", orphanRemoval="true", cascade={"all"})
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="post", orphanRemoval=true, cascade={"all"})
      */
     private $comments;
 
@@ -169,7 +169,7 @@ class Post
     }
 
     /**
-     * @ORM\prePersist
+     * @ORM\PrePersist
      */
     public function createCreatedAtValue()
     {
