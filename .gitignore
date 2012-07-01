@@ -1,5 +1,5 @@
 phpunit.xml
-Tests/autoload.php
-Tests/App/cache
-Tests/App/logs
-Tests/App/parameters.ini
+Tests/Functional/App/cache
+Tests/Functional/App/logs
+Tests/Functional/App/parameters.yml
+vendor
