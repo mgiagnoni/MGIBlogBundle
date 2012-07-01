@@ -2,7 +2,7 @@
 <phpunit bootstrap="./Tests/bootstrap.php" color="true">
   <php>
     <!-- <server name="SYMFONY" value="/path/to/symfony" /> -->
-    <server name="KERNEL_DIR" value="Tests/App" />
+    <server name="KERNEL_DIR" value="Tests/Functional/App" />
   </php>
   <testsuites>
     <testsuite name="MGIBlogBundle Test Suite">
