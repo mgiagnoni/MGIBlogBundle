@@ -3,7 +3,6 @@ imports:
 
 framework:
     secret:          secret
-    charset:         UTF-8
     test: ~
     router:          { resource: "%kernel.root_dir%/routing.yml" }
     form:            true
@@ -11,7 +10,6 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] }
     session:
-        auto_start: false
         storage_id: session.storage.filesystem
 
 doctrine:

@@ -24,5 +24,6 @@
     "autoload": {
         "psr-0": { "MGI\\BlogBundle": "" }
     },
-    "target-dir": "MGI/BlogBundle"
+    "target-dir": "MGI/BlogBundle",
+    "minimum-stability": "dev"
 }
