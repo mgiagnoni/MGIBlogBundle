@@ -108,6 +108,16 @@ class Post
     }
 
     /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
      * Set content
      *
      * @param text $content

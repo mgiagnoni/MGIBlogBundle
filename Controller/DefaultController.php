@@ -30,13 +30,13 @@ class DefaultController extends Controller
     /**
      * Shows post page
      *
-     * @param integer $id post id
+     * @param string $slug post slug
      */
-    public function ShowAction($id)
+    public function ShowAction($slug)
     {
         $post = $this->getDoctrine()
             ->getRepository('MGIBlogBundle:Post')
-            ->find($id);
+            ->findOneBy(array('slug' => $slug));
 
         if (null === $post) {
             throw $this->createNotFoundException('Post not found!');

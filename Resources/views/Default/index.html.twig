@@ -5,6 +5,6 @@
     <h2 class="post-title">{{ post.title }}</h2>
     <div class="post-date">{{ post.createdAt|date('j F, Y')}}</div>
     {{ post.summary|raw }}
-    <div class="post-readmore"><a href="{{ path('mgi_blog_show', { 'id' : post.id }) }}">Read more ...</a></div>
+    <div class="post-readmore"><a href="{{ path('mgi_blog_show', { 'slug' : post.slug }) }}">Read more ...</a></div>
     {% endfor %}
 {% endblock %}
