@@ -12,6 +12,7 @@
 namespace MGI\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -40,6 +41,14 @@ class Post
      * @Assert\NotBlank(message = "Enter post title")
      */
     private $title;
+
+    /**
+     * @var string $slug
+     *
+     * @ORM\Column(name="slug", type="string", length=255)
+     * @Gedmo\Slug(unique=true,updatable=true,separator="-",fields={"title"})
+     */
+    private $slug;
 
     /**
      * @var text $content
