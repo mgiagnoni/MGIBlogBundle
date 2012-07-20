@@ -80,7 +80,7 @@ Register ``MGI`` namespace for use by the autoloader::
 
     // ...
 
-Add bundle to application kernel
+Add bundles to application kernel
 --------------------------------
 
 ::
@@ -91,6 +91,8 @@ Add bundle to application kernel
     {
         $bundles = array(
             // other bundles
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Lyra\AdminBundle\LyraAdminBundle(),
             new MGI\BlogBundle\MGIBlogBundle(),
         );
 
@@ -102,6 +104,9 @@ Import routing configuration
 ::
 
     # app/config/routing.yml
+
+    LyraAdminBundle:
+        resource: "@LyraAdminBundle/Resources/config/routing.yml"
 
     MGIBlogBundle:
         resource: "@MGIBlogBundle/Resources/config/routing.yml"
