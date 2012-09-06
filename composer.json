@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/symfony": "2.1.*",
+        "symfony/symfony": ">=2.1.0,<2.2.0-dev",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
@@ -26,6 +26,5 @@
     "autoload": {
         "psr-0": { "MGI\\BlogBundle": "" }
     },
-    "target-dir": "MGI/BlogBundle",
-    "minimum-stability": "dev"
+    "target-dir": "MGI/BlogBundle"
 }
